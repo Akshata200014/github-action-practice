@@ -8,9 +8,9 @@ on:
 jobs:
 
   great:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: great to users
-        run: echo "hello $USER"
+        run: echo "hello ${{ github.actor }}"
       - name: great to all
-        run : echo "hello eveyone"
+        run: echo "hello eveyone"
