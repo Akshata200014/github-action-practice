@@ -11,7 +11,9 @@ jobs:
         - name: pull docker image
           run: docker pull nginx:latest
         - name: docker status
-          run: systemctl status docker | systemctl enable docker
+          run: run: |
+          docker --version
+          docker ps
         - name: run container
           run: docker run -d --name web-server -p 8080:80 nginx:latest
         - name: check container running
