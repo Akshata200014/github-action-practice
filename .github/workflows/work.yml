@@ -17,5 +17,7 @@ jobs:
         - name: run container
           run: docker run -d --name web-server -p 8080:80 nginx:latest
         - name: check container running
-          run: docker ps curl -f http://localhost:8080
+          run: |
+            docker ps 
+            curl -f http://localhost:8080
 
