@@ -7,13 +7,13 @@ on:
 jobs:
   build-job:
     runs-on: ubuntu-latest
-        steps:
-            - name: pull docker image
-              run: docker pull nginx:latest
-            - name: docker status
-              run: systemctl status docker | systemctl enable docker
-            - name: run container
-              run: docker run -d --name web-server -p 8080:80 nginx:latest
-            - name: check container running
-              run: docker ps curl -f http://localhost:8080
+    steps:
+        - name: pull docker image
+          run: docker pull nginx:latest
+        - name: docker status
+          run: systemctl status docker | systemctl enable docker
+        - name: run container
+          run: docker run -d --name web-server -p 8080:80 nginx:latest
+        - name: check container running
+          run: docker ps curl -f http://localhost:8080
 
