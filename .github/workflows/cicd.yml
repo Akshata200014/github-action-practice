@@ -1,0 +1,16 @@
+name: workflow-practice
+
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+
+  great:
+    run-on: ubuntu:latest
+    steps:
+      - name: great to users
+        run: echo "hello $USER"
+      - name: great to all
+        run : echo "hello eveyone"
