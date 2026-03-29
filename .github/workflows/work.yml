@@ -21,11 +21,13 @@ jobs:
             docker ps 
             curl -f http://localhost:8080
   version-job:
+    needs: build-job
     runs-on: ubuntu-latest
     steps:
       - name: show the versions
         # Pro-Tip: Use python3 for modern Ubuntu images
         run: docker --version && python3 --version
-          
+  
+    
            
 
