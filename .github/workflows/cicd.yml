@@ -1,10 +1,8 @@
 name: workflow-practice
 
 on:
-  push:
-    branches: [main]
-
-
+  workflow_dispatch:
+    
 jobs:
 
   great:
