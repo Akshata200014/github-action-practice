@@ -21,3 +21,9 @@ jobs:
             docker ps 
             curl -f http://localhost:8080
 
+   version-job:
+     runs-on: ubuntu-latest
+     steps:
+       - name: show the verisons of docker
+         run: docker --version && python --version 
+
