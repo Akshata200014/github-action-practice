@@ -1,18 +1,17 @@
 
 name: new-workflow
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
     inputs:
-     environment: 
-        description: 'Select the environment to deploy to'
+      environment:
+        description: 'this work floe for on practice'
         required: true
-        default: 'dev'
-        type: choice 
+        default: dev
+        type: choice
         options:
           - dev
           - stg
-          - prod
-      
+          - prod 
 jobs:
   build-job:
     runs-on: ubuntu-latest
