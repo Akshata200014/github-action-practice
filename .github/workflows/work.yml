@@ -1,10 +1,17 @@
 
 name: new-workflow
 on:
-  push:
-    branches: [main]
-    paths: 
-    - "**.md"
+  workflow_dispatch: 
+    inputs:
+     environment: 
+        description: 'Select the environment to deploy to'
+        required: true
+        default: 'dev'
+        type: choice 
+        options:
+          - dev
+          - stg
+          - prod
       
 jobs:
   build-job:
